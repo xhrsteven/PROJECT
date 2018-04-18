@@ -15,7 +15,7 @@ $('#submit').on('click', function(event) {
     var priceMin = $('#price-min').val().trim();
     var priceMax = $('#price-max').val().trim();
     var city = $('#city').val().trim();
-    var date = $('#date').val().trim();
+    // var date = $('#date').val().trim();
 
     // var stringDate = date.toString();
 
@@ -26,8 +26,8 @@ $('#submit').on('click', function(event) {
     console.log(priceMin);
     console.log(priceMax);
     console.log(city);
-    console.log(date);
-    var newUrl = "https://app.ticketmaster.com/discovery/v2/events.json?keyword=" + userInput + "&limit=5&prices=" +  priceMin + "," + priceMax + "&city=" + city + "&postalCode=" + date  + "&apikey=6AHBYWAdSZSjLGGMe3pKvtKLiPPGneD9";
+    // console.log(date);
+    var newUrl = "https://app.ticketmaster.com/discovery/v2/events.json?keyword=" + userInput + "&limit=5&prices=" +  priceMin + "," + priceMax + "&city=" + city +  "&apikey=6AHBYWAdSZSjLGGMe3pKvtKLiPPGneD9";
     
     // + "&startDateTime=" + newDate 
 
@@ -64,12 +64,12 @@ $.ajax({
             img.attr('src', json._embedded.events[i].images[0].url);
             img.attr('data-id', json._embedded.events[i].id);
             img.attr('style', 'width: 300px; height: 200px; margin-left: 10px; clear: both;');
-            img.attr('class', 'imageBox');
+            // img.attr('class', 'imageBox');
             eventImage.append(img);
             eventImage.append(imgName);
             
             // json._embedded.events[0].id
-            eventImage.on('click', function() {
+            img.on('click', function() {
             localStorage.clear();
             var idPush = img.attr('data-id');
             localStorage.setItem("ID", JSON.stringify(idPush));
