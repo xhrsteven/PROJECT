@@ -1,28 +1,29 @@
 
-// localStorage.getItem('id',JSON.stringify(idArray));
+var idArray = localStorage.getItem('ID');
 
-$.ajax({
-  type:"GET",
-  url:"https://app.ticketmaster.com/discovery/v2/events.json?keyword=&apikey=vP8HIpf3zmjHbqSczAEciZsvep9p5Asw",
-  async:true,
-  dataType: "json",
-  success: function(json) {
+console.log(idArray);
+// $.ajax({
+//   type:"GET",
+//   url:"https://app.ticketmaster.com/discovery/v2/events.json?keyword=&apikey=vP8HIpf3zmjHbqSczAEciZsvep9p5Asw",
+//   async:true,
+//   dataType: "json",
+//   success: function(json) {
               
-              console.log(json);
-              for (let i = 0; i < json._embedded.events[i].id.length; i++) { 
+//               console.log(json);
+//               for (let i = 0; i < json._embedded.events[i].id.length; i++) { 
                
-              var eventID = json._embedded.events[i].id; };
-              console.log(eventID);
+//               var eventID = json._embedded.events[i].id; };
+//               console.log(eventID);
               
-              eventDetails(eventID)
-              // Parse the response.
+//               eventDetails(eventID)
+//               // Parse the response.
               
-              // Do other things.
-           },
-  error: function(xhr, status, err) {
-              // This time, we do not end up here!
-           }
-});
+//               // Do other things.
+//            },
+//   error: function(xhr, status, err) {
+//               // This time, we do not end up here!
+//            }
+// });
 
 function eventDetails(idArray){
   $.ajax({
