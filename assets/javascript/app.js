@@ -69,13 +69,10 @@ $.ajax({
             eventImage.append(imgName);
             
             // json._embedded.events[0].id
-            img.on('click', function() {
+            eventImage.on('click', function() {
             localStorage.clear();
             var idPush = img.attr('data-id');
-            // var concertID = json._embedded.events[i].id;
-            // idArray.push(concertID);
             localStorage.setItem("ID", JSON.stringify(idPush));
-            // console.log(idPush);
         })
 
         /* <div class="row">
