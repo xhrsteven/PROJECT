@@ -15,19 +15,19 @@ $('#submit').on('click', function(event) {
     var priceMin = $('#price-min').val().trim();
     var priceMax = $('#price-max').val().trim();
     var city = $('#city').val().trim();
-    var date = $('#date').val();
+    var date = $('#date').val().trim();
 
     // var stringDate = date.toString();
 
-    newDate = moment(date).format("YYYY-MM-DD");
-    ;
+    // newDate = moment(date).format("YYYY-MM-DD");
+    
 
     console.log(userInput);
     console.log(priceMin);
     console.log(priceMax);
     console.log(city);
-    console.log(newDate);
-    var newUrl = "https://app.ticketmaster.com/discovery/v2/events.json?keyword=" + userInput + "&limit=5&prices=" +  priceMin + "," + priceMax + "&city=" + city + "&apikey=6AHBYWAdSZSjLGGMe3pKvtKLiPPGneD9";
+    console.log(date);
+    var newUrl = "https://app.ticketmaster.com/discovery/v2/events.json?keyword=" + userInput + "&limit=5&prices=" +  priceMin + "," + priceMax + "&city=" + city + "&postalCode=" + date  + "&apikey=6AHBYWAdSZSjLGGMe3pKvtKLiPPGneD9";
     
     // + "&startDateTime=" + newDate 
 
@@ -38,38 +38,45 @@ $.ajax({
     dataType: "json",
     success: function(json) {
         console.log(json._embedded);
-            console.log(json._embedded.events);
-            console.log(json._embedded.events[0].dates.start.localDate);
-            console.log(json._embedded.events[0]._embedded.venues[0].name);
-            console.log('The longitude is: ' + json._embedded.events[0]._embedded.venues[0].location.longitude);
-            console.log('The latitude is: ' + json._embedded.events[0]._embedded.venues[0].location.latitude);
+            // console.log(json._embedded.events);
+            // console.log(json._embedded.events[0].dates.start.localDate);
+            // console.log(json._embedded.events[0]._embedded.venues[0].name);
+            // console.log('The longitude is: ' + json._embedded.events[0]._embedded.venues[0].location.longitude);
+            // console.log('The latitude is: ' + json._embedded.events[0]._embedded.venues[0].location.latitude);
             
-            var longitude = (json._embedded.events[0]._embedded.venues[0].location.longitude);
-            var latitude = (json._embedded.events[0]._embedded.venues[0].location.latitude);
+
             
             
-            for (i = 0; i < json._embedded.events.length; i++) {
+            for (i = 0; i < 5; i++) {
+
+                var longitude = (json._embedded.events[i]._embedded.venues[0].location.longitude);
+                var latitude = (json._embedded.events[i]._embedded.venues[0].location.latitude);
             
                 var eventImage = $('.eventImage');
+                eventImage.attr('style', 'width:fit-content');
             a = $('#link');
-            a.attr('href', 'https://www.google.com');
+            a.attr('href', 'details.html');
             
             var img = $('<img>');
+            img.attr('data-id', json._embedded.events[i].id);
             var imgName = $('<p>' + json._embedded.events[i].name + '</p><p>' + json._embedded.events[i]._embedded.venues[0].name + '</p><p>' + json._embedded.events[i].dates.start.localDate + '</p>' + '</p><p>' + json._embedded.events[i].dates.start.localTime + '</p>');
             imgName.attr('style', 'line-height: 40%; margin-top: 5px')
-            img.attr('src', json._embedded.events[i].images[i].url);
-            img.attr('style', 'width: 300px; height: 200px; margin-left: 10px; display: inline-blockd');
+            img.attr('src', json._embedded.events[i].images[0].url);
+            img.attr('data-id', json._embedded.events[i].id);
+            img.attr('style', 'width: 300px; height: 200px; margin-left: 10px; clear: both;');
             img.attr('class', 'imageBox');
             eventImage.append(img);
             eventImage.append(imgName);
             
             // json._embedded.events[0].id
+            img.on('click', function() {
             localStorage.clear();
-            var idArray = [];
-            var concertID = json._embedded.events[i].id;
-            idArray.push(concertID);
-            localStorage.setItem("ID", JSON.stringify(idArray));
-            console.log(idArray);
+            var idPush = img.attr('data-id');
+            // var concertID = json._embedded.events[i].id;
+            // idArray.push(concertID);
+            localStorage.setItem("ID", JSON.stringify(idPush));
+            // console.log(idPush);
+        })
 
         /* <div class="row">
         <div class="col-sm-6 col-md-4">
