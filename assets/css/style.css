@@ -1,0 +1,28 @@
+body {
+    background-color: rgb(92, 86, 86);
+}
+
+#searchBar {
+    /* margin-left: 100px; */
+    margin-bottom: 15px;
+}
+
+.eventImage {
+    text-align: center;
+    width: 100%;
+    float: left;
+    
+}
+#logo{
+    display: inline-block;
+    margin:0 auto;
+}
+
+
+#imageResults {
+    width: 100%;
+    /* height: auto; */
+    /* display: inline-block; */
+    /* float: left; */
+
+}
