@@ -43,10 +43,9 @@ function eventDetails(idArray){
               
                 var eventName = json.name;
                 var eventUrl = json.url;
-                var link = '<a href="'+json.url+'"></a>'
                 var venue = json._embedded.venues[0];
-                console.log(venue);
-                console.log(json.url);
+               
+                
                 var lat = json._embedded.venues[0].location.latitude;
                 var long = json._embedded.venues[0].location.longitude;
 
@@ -65,11 +64,14 @@ function eventDetails(idArray){
                 // console.log(long);
 
                 $("#eventName").append(eventName);
-                $('#eventName').attr("src",link);
+                $('#buy').on('click',function () {
+                  window.location= eventUrl;
+                })
                 $("#eventDate").append(json.dates.start.localDate);
                 $("#eventTime").append(json.dates.start.localTime);
                 $("#eventPrice").append("$" + json.priceRanges[0].min + " - " + "$" + json.priceRanges[0].max)
                 $("#eventLocation").append(json._embedded.venues[0].name);
+                $("#eventAddress").append(venue.address.line1 + "," + venue.city.name + "," + venue.state.name + "," + venue.state.stateCode);
                 $("#eventGenre").append(json.classifications[0].genre.name);
                 $('#eventInfo').append(venue.generalInfo.generalRule);
              }            
