@@ -18,8 +18,8 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-default" style="background-color: #90aa86">   
-        <div class="logo" onclick = 'window.location="index.html"'><img src="assets/images/detective.PNG" alt="" style="width: 200px" id="logo"></div>
+    <nav class="navbar navbar-default" style="background-image: url('https://png.pngtree.com/thumb_back/fw800/back_pic/03/55/95/23579d9d9102440.jpg')">   
+        <div class="logo" onclick = 'window.location="index.html"'><img src="assets/images/logo-clean.png" alt="" style="width: 200px" id="logo"></div>
         <!-- header w/search -->
             <div class="navbar-header"></div>
             <button type="submit" class="btn-default" id="searchConcerts">Search Concerts</button>
@@ -37,8 +37,8 @@
                 </div>
                 <div data-role="main" class="ui-content col-lg-4">
                     <form method="post" action="/action_page_post.php">
-                        <div data-role="rangeslider" style="width:300px">
-                            <label for="price-min" style="margin-top: 10px">Price Range:</label>
+                        <div data-role="rangeslider"  id="rangeSlider">
+                            <label for="price-min" style="margin-top: 10px" id="rangeSliderLabel">Price Range:</label>
                             <input type="range" name="price-min" id="price-min" value="0" min="0" max="500">
                             <label for="price-max">Price:</label>
                             <input type="range" name="price-max" id="price-max" value="200" min="0" max="500">
@@ -55,7 +55,7 @@
                                 <li><a data-genre="Music"class="myGenre"><b>All Music</b></a></li>
                                 <li role="separator" class="divider"></li>
                                 <li><a data-genre="Cabaret" class="myGenre">Cabaret</a></li>
-                                <li><a data-genre="Classical"class="myGenre">Clasical</a></li>
+                                <li><a data-genre="Classical"class="myGenre">Classical</a></li>
                                 <li><a data-genre="Comedy"class="myGenre">Comedy</a></li>
                                 <li><a data-genre="Country and Folk"class="myGenre">Country and Folk</a></li>
                                 <li><a data-genre="Dance/Electronic"class="myGenre">Dance/Electronic</a></li>
@@ -81,7 +81,7 @@
     </div>
 
     <div class="container" id="carousel">
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="width: fit-content; margin-left: 130px">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" >
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img class="d-block w-100" src="assets/images/jayz.jpg" alt="First slide">

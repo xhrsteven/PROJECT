@@ -3,7 +3,7 @@ body,button,label{
 }
 
 #searchBar {
-    /* margin-left: 100px; */
+    margin-left: 50px;
     margin-bottom: 25px;
     margin-right: 20px;
 }
@@ -38,6 +38,21 @@ li:hover {
 }
 
 #dropdownMenu1 {
-    width: 850px;
-    text-align: center;
+    width: 500px;
+    text-align: right;
+    font-size: 25pt;
+    margin-top: -12px;
+}
+
+#rangeSlider, #rangeSliderLabel {
+    margin-left: 20px;
+}
+
+#carousel {
+    background-color: black;
+    width: 100%
+}
+
+.container {
+    background-image: url('https://i.ytimg.com/vi/Eej6AuSHpwY/maxresdefault.jpg');
 }
