@@ -1,0 +1,69 @@
+@import url(http://fonts.googleapis.com/css?family=Jacques+Francois);
+
+body,
+button,h3,
+.accordion-panel {
+    font-family: 'Jacques Francois', serif;
+    font-size: 20px;
+}
+.page {
+    max-width: 640px;
+    margin: 0 auto 30px auto;
+}
+
+/* .panel {
+    background-color: #fff;
+    color: #666;
+    box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.2);
+    overflow: auto;
+} */
+
+button {
+    font-size: 90%;
+    text-align: left;
+    text-transform: uppercase;
+    border: none;
+}
+
+#map{
+    width: 200px;
+    height: 400px;
+    width: 100%;
+    border: #f2f2f2,solid;
+}
+h3 {
+    font-size: 90%;
+    letter-spacing: 0.2em;
+    text-align: center;
+}
+/**********  ACCORDION **********/
+
+.accordion{
+    background-color: #f2f2f2;
+    color: #666;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+.accordion li {
+    padding: 0;
+    list-style-type: none;
+}
+
+.accordion-control {
+    background-color: #303030;
+    color: #fff;
+    display: block;
+    width: 100%;
+    padding: 0.5em 0.5em 0.5em 0.7em;
+    margin: 0;
+    border-top: 1px solid #666;
+}
+
+.accordion-panel {
+    display: none;
+}
+
+.accordion-panel img {
+    display: block;}

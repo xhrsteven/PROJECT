@@ -22,9 +22,6 @@ console.log(idArray);
 //               // Parse the response.
               
 //               // Do other things.
-//            },
-//   error: function(xhr, status, err) {
-//               // This time, we do not end up here!
 //            }
 // });
 eventDetails(idArray);
@@ -38,7 +35,7 @@ function eventDetails(idArray){
     success: function(json) {
                 console.log(json);
                 var imgURL = json.images[1].url;
-                console.log(imgURL);
+                // console.log(imgURL);
                 var imgU = $('<img>');
                 imgU.attr('src', imgURL);
                 // imgU.attr('href', eventUrl);
@@ -46,6 +43,10 @@ function eventDetails(idArray){
               
                 var eventName = json.name;
                 var eventUrl = json.url;
+                var link = '<a href="'+json.url+'"></a>'
+                var venue = json._embedded.venues[0];
+                console.log(venue);
+                console.log(json.url);
                 var lat = json._embedded.venues[0].location.latitude;
                 var long = json._embedded.venues[0].location.longitude;
 
@@ -60,19 +61,33 @@ function eventDetails(idArray){
                   position: location,
                   map: map
                 });
-                console.log(lat);
-                console.log(long);
+                // console.log(lat);
+                // console.log(long);
 
-                $(".name").append(eventName);
-                $(".dates").append(json.dates.start.localDate);
-                $(".time").append(json.dates.start.localTime);
-                $(".price").append("$" + json.priceRanges[0].min + " - " + "$" + json.priceRanges[0].max)
-                $(".location").append(json._embedded.venues[0].name);
-                $(".genre").append(json.classifications[0].genre.name);
-
+                $("#eventName").append(eventName);
+                $('#eventName').attr("src",link);
+                $("#eventDate").append(json.dates.start.localDate);
+                $("#eventTime").append(json.dates.start.localTime);
+                $("#eventPrice").append("$" + json.priceRanges[0].min + " - " + "$" + json.priceRanges[0].max)
+                $("#eventLocation").append(json._embedded.venues[0].name);
+                $("#eventGenre").append(json.classifications[0].genre.name);
+                $('#eventInfo').append(venue.generalInfo.generalRule);
              }            
   });
 };
 
-
+$(".accordion-panel").animate({
+  height: "show",
+  paddingTop: "show",
+  paddingBottom: "show",
+  marginTop: "show",
+  marginBottom: "show"
+});
+$(".accordion").on("click", ".accordion-control", function(e) {
+  e.preventDefault();
+  $(this)
+    .next(".accordion-panel")
+    .not(":animated")
+    .slideToggle();
+});
         
