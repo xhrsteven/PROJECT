@@ -11,13 +11,6 @@ button,h3,
     margin: 0 auto 30px auto;
 }
 
-/* .panel {
-    background-color: #fff;
-    color: #666;
-    box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.2);
-    overflow: auto;
-} */
-
 button {
     font-size: 90%;
     text-align: left;
@@ -30,11 +23,17 @@ button {
     height: 400px;
     width: 100%;
     border: #f2f2f2,solid;
+    margin-bottom: 20px;
 }
 h3 {
     font-size: 90%;
     letter-spacing: 0.2em;
     text-align: center;
+}
+#logo{
+    width: 200px;
+    display: block;
+    margin: 0 auto;
 }
 /**********  ACCORDION **********/
 
