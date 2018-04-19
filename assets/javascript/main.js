@@ -1,9 +1,10 @@
 
-var idArray1 = localStorage.getItem('ID').replace(/['"]+/g, '');
+var idArray1 = localStorage.getItem('id').replace(/[' "]+/g, '');
 var idArray = idArray1.replace(/[\[\]']+/g, '');
 
-console.log(idArray);
 
+// var idArray = JSON.parse(localStorage.getItem('idlist'));
+console.log(idArray);
 
 // $.ajax({
 //   type:"GET",
@@ -27,6 +28,7 @@ console.log(idArray);
 eventDetails(idArray);
 
 function eventDetails(idArray){
+
   $.ajax({
     type:"GET",
     url:"https://app.ticketmaster.com/discovery/v2/events/" + idArray + ".json?apikey=vP8HIpf3zmjHbqSczAEciZsvep9p5Asw",
