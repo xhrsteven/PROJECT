@@ -17,15 +17,10 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-default" style="background-color: #90aa86">
-        <a href="index.html"><img src="assets/images/detective.PNG" alt="" style="width: 200px" id="logo"></a>
+    <nav class="navbar navbar-default" style="background-color: #90aa86">   
+        <div class="logo" onclick = 'window.location="index.html"'><img src="assets/images/detective.PNG" alt="" style="width: 200px" id="logo"></div>
         <!-- header w/search -->
-            <div class="navbar-header">
-
-      
-                   
-                
-            </div>
+            <div class="navbar-header"></div>
             <button type="submit" class="btn-default" id="searchConcerts">Search Concerts</button>
 
             <!-- hidden search bar -->
@@ -33,98 +28,83 @@
     </nav>
 
     <div id="searchBar">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-6">
-                <label for="location">City</label>
-                <input type="text" name="location" style="margin-top: 10px" id="city">
-            </div>
-            <div data-role="main" class="ui-content col-lg-6">
-                <form method="post" action="/action_page_post.php">
-                    <div data-role="rangeslider" style="width:300px">
-                        <label for="price-min">Price Range:</label>
-                        <input type="range" name="price-min" id="price-min" value="0" min="0" max="500">
-                        <label for="price-max">Price:</label>
-                        <input type="range" name="price-max" id="price-max" value="200" min="0" max="500">
-                    </div>
-            </div>
-            <!-- <div class="col-lg-4"> -->
-                <!-- <label for="location">Area Code</label>
-                <input type="text" name="date" style="margin-top: 10px" id="date"> -->
-            <!-- </div> -->
-            <!-- <input type="text" data-inline="true" placeholder="Enter Genre" style="width: 700px; text-align: center;" class="container-fluid"
-                id="userInput"> -->
-
-<div class="dropdown">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-   Choose Your Genre
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-    <li><a data-genre="Music"class="myGenre"><b>All Music</b></a></li>
-    <li role="separator" class="divider"></li>
-    <li><a data-genre="Cabaret" class="myGenre">Cabaret</a></li>
-    <li><a data-genre="Classical"class="myGenre">Clasical</a></li>
-    <li><a data-genre="Comedy"class="myGenre">Comedy</a></li>
-    <li><a data-genre="Country and Folk"class="myGenre">Country and Folk</a></li>
-    <li><a data-genre="Dance/Electronic"class="myGenre">Dance/Electronic</a></li>
-    <li><a data-genre="Festivals"class="myGenre">Festivals</a></li>
-    <li><a data-genre="Hard Rock/Metal"class="myGenre">Hard Rock/Metal</a></li>
-    <li><a data-genre="Jazz and Blues"class="myGenre">Jazz and Blues</a></li>
-    <li><a data-genre="latin"class="myGenre">latin</a></li>
-    <li><a data-genre="New Age and Spiritual"class="myGenre">New Age and Spiritual</a></li>
-    <li><a data-genre="R/&B/Urban Soul"class="myGenre">R&B/Urban Soul</a></li>
-    <li><a data-genre="Rap and Hip-Hop"class="myGenre">Rap and Hip-Hop</a></li>
-    <li><a data-genre="Rock and Pop"class="myGenre">Rock and Pop</a></li>
-    <li><a data-genre="World Music"class="myGenre">World Music</a></li>
-    <li><a data-genre="Miscellaneous"class="myGenre">Miscellaneous</a></li>
-  </ul>
-</div>
-            <!-- <input type="submit" value="Show Me the Concerts" style="float: right; margin-left:10px" id="submit"> -->
-            </form>
-        </div>
-    </div>
-</div>
-    <!-- <div class="row"> -->
-   <div id="imageResults">
-        <a id="link"><div class="eventImage"></div></a>
-
-    </div>
-<!-- </div> -->
-</div>
-
-        <div class="container" id="carousel">
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="width: fit-content; margin-left: 130px">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img class="d-block w-100" src="assets/images/jayz.jpg" alt="First slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="assets/images/justin.jpg" alt="Second slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="assets/images/ed.jpg" alt="Third slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="assets/images/tyler.jpg" alt="Forth slide">
-                    </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4" style="padding-top:20px;">
+                    <label for="location">City</label>
+                    <input type="text" name="location"  id="city">
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
+                <div data-role="main" class="ui-content col-lg-4">
+                    <form method="post" action="/action_page_post.php">
+                        <div data-role="rangeslider" style="width:300px">
+                            <label for="price-min" style="margin-top: 10px">Price Range:</label>
+                            <input type="range" name="price-min" id="price-min" value="0" min="0" max="500">
+                            <label for="price-max">Price:</label>
+                            <input type="range" name="price-max" id="price-max" value="200" min="0" max="500">
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-lg-4" style="padding-top:40px;">
+                    <div class='dropdown'>
+                        <button class="btn btn-default dropdown-toggle text-left" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Choose Your Genre
+                        </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li><a data-genre="Music"class="myGenre"><b>All Music</b></a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a data-genre="Cabaret" class="myGenre">Cabaret</a></li>
+                                <li><a data-genre="Classical"class="myGenre">Clasical</a></li>
+                                <li><a data-genre="Comedy"class="myGenre">Comedy</a></li>
+                                <li><a data-genre="Country and Folk"class="myGenre">Country and Folk</a></li>
+                                <li><a data-genre="Dance/Electronic"class="myGenre">Dance/Electronic</a></li>
+                                <li><a data-genre="Festivals"class="myGenre">Festivals</a></li>
+                                <li><a data-genre="Hard Rock/Metal"class="myGenre">Hard Rock/Metal</a></li>
+                                <li><a data-genre="Jazz and Blues"class="myGenre">Jazz and Blues</a></li>
+                                <li><a data-genre="latin"class="myGenre">latin</a></li>
+                                <li><a data-genre="New Age and Spiritual"class="myGenre">New Age and Spiritual</a></li>
+                                <li><a data-genre="R/&B/Urban Soul"class="myGenre">R&B/Urban Soul</a></li>
+                                <li><a data-genre="Rap and Hip-Hop"class="myGenre">Rap and Hip-Hop</a></li>
+                                <li><a data-genre="Rock and Pop"class="myGenre">Rock and Pop</a></li>
+                                <li><a data-genre="World Music"class="myGenre">World Music</a></li>
+                                <li><a data-genre="Miscellaneous"class="myGenre">Miscellaneous</a></li>
+                            </ul>
+                    </div>        
+                </div>              
             </div>
-
-
-
         </div>
     </div>
+      
+    <div id="imageResults">
+        <a id="link"><div class="eventImage"></div></a>
+    </div>
 
-
+    <div class="container" id="carousel">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="width: fit-content; margin-left: 130px">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="assets/images/jayz.jpg" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="assets/images/justin.jpg" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="assets/images/ed.jpg" alt="Third slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="assets/images/tyler.jpg" alt="Forth slide">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>

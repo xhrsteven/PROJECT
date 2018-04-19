@@ -17,10 +17,8 @@
 
 <body>
     <!-- navigation bar -->
-    <nav class="nav navbar navbar-default" style="background-color: #90aa86">
-        
-        <img src="assets/images/detective.PNG" id="logo">
-         
+    <nav class="nav navbar navbar-default" style="background-color: #90aa86">  
+        <div class="logo" onclick = 'window.location="index.html"'><img src="assets/images/detective.PNG" alt="" style="width: 200px" id="logo"></div>  
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -40,54 +38,56 @@
         </div>
     </nav>
 
-            <div class="page">
-                <ul class="accordion">
-                    <li>
-                        <button class="accordion-control">Event</button>
-                        <div id="pic" class="accordion-panel"></div>
-                    </li>
-                    <li>
-                        <button class="accordion-control">Event Name</button>
-                        <div class="accordion-panel"><h3 id="eventName"></h3></div>
-                    </li>
-                    <li>
-                        <button class="accordion-control">Event Date</button>
-                        <div id="eventDate" class="accordion-panel"></div>
-                    </li>
-                    <li>
-                        <button class="accordion-control">Event Time</button>
-                        <div id="eventTime" class="accordion-panel"></div>
-                    </li>
-                    <li>
-                        <button class="accordion-control">Event Genre</button>
-                        <div id="eventGenre" class="accordion-panel"></div>
-                    </li>
-                    <li>
-                        <button class="accordion-control">Price Range</button>
-                        <div id="eventPrice" class="accordion-panel"></div>
-                    </li>
-                    <li>
-                        <button class="accordion-control">Event Location</button>
-                        <div id="eventLocation" class="accordion-panel"></div>
-                    </li>
-                    <li>
-                        <button class="accordion-control">Event Address</button>
-                        <div id="eventAddress" class="accordion-panel"></div>
-                    </li>
-                    <li>
-                        <button class="accordion-control">General Rule</button>
-                        <div id="eventInfo" class="accordion-panel"></div>
-                    </li>
-                    <li>
-                        <button class="accordion-control" id="buy">Buy Here</button>
-                    </li>
-                </ul>
-            </div>
+    <div class="page">
+        <ul class="accordion">
+            <li>
+                <button class="accordion-control">Event</button>
+                <div id="pic" class="accordion-panel"></div>
+            </li>
+            <li>
+                <button class="accordion-control">Event Name</button>
+                <div class="accordion-panel"><h3 id="eventName"></h3></div>
+            </li>
+            <li>
+                <button class="accordion-control">Event Date</button>
+                <div id="eventDate" class="accordion-panel"></div>
+            </li>
+            <li>
+                <button class="accordion-control">Event Time</button>
+                <div id="eventTime" class="accordion-panel"></div>
+            </li>
+            <li>
+                <button class="accordion-control">Event Genre</button>
+                <div id="eventGenre" class="accordion-panel"></div>
+            </li>
+            <li>
+                <button class="accordion-control">Price Range</button>
+                <div id="eventPrice" class="accordion-panel"></div>
+            </li>
+            <li>
+                <button class="accordion-control">Event Location</button>
+                <div id="eventLocation" class="accordion-panel"></div>
+            </li>
+            <li>
+                <button class="accordion-control">Event Address</button>
+                <div id="eventAddress" class="accordion-panel"></div>
+            </li>
+            <li>
+            <button class="accordion-control">General Rule</button>
+            <div id="eventInfo" class="accordion-panel"></div>
+            </li>
+            <li>
+            <button class="accordion-control" id="buy">Buy Here</button>
+            </li>
+        </ul>
+    </div>
+
     <h3>Location info</h3>
     <div class="page" style="margin-bottom:40px;">
         <div id="map"></div>
     </div>
     <br>
+    
     <footer class="footer navbar-fixed-bottom text-muted text-center" style="background-color: #90aa86">
             <div class="panel-footer text-center active">
                 <a href="www.facebook.com"><i class="fa fa-facebook-square fa-lg"></i></a>
