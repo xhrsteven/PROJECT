@@ -1,4 +1,4 @@
-# PROJECT
+# PROJECT-Concert Detective
 
 Concert detective is a web and mobile user friendly app that helps you find concerts on the go. It is search customizable to filter specific details to cater to your music preferences.
 
