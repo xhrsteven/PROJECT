@@ -1,5 +1,5 @@
 
-var idArray1 = localStorage.getItem('id').replace(/['"]+/g, '');
+var idArray1 = localStorage.getItem('ID').replace(/['"]+/g, '');
 var idArray = idArray1.replace(/[\[\]']+/g, '');
 
 console.log(idArray);
@@ -34,7 +34,7 @@ function eventDetails(idArray){
     dataType: "json",
     success: function(json) {
                 console.log(json);
-                var imgURL = json.images[1].url;
+                var imgURL = json.images[2].url;
                 var imgU = $('<img>');
                 imgU.attr('src', imgURL); 
                 $('#pic').append(imgU);

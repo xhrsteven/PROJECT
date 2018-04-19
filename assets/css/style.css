@@ -1,16 +1,17 @@
-body {
-    background-color: rgb(92, 86, 86);
-}
+
 
 #searchBar {
     /* margin-left: 100px; */
     margin-bottom: 15px;
+    margin-left: 50px;
 }
+
 
 .eventImage {
     text-align: center;
-    width: 100%;
-    float: left;
+    /* width: 100%; */
+    background-color: #90aa86;
+
     
 }
 #logo{
@@ -18,11 +19,23 @@ body {
     margin:0 auto;
 }
 
+.imageBox:hover {
+    
+    filter: drop-shadow(8px 8px 10px black);
+    transform: scale(1.2);
+    /* filter: sepia(100%); */
+}
 
-#imageResults {
-    width: 100%;
-    /* height: auto; */
-    /* display: inline-block; */
-    /* float: left; */
+#chooseGenre {
+    background-color: red;
+}
 
+li:hover {
+    background-color: #90aa86;
+    color: #90aa86;
+}
+
+#dropdownMenu1 {
+    width: 850px;
+    text-align: center;
 }
