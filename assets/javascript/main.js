@@ -35,17 +35,14 @@ function eventDetails(idArray){
     success: function(json) {
                 console.log(json);
                 var imgURL = json.images[1].url;
-                // console.log(imgURL);
                 var imgU = $('<img>');
-                imgU.attr('src', imgURL);
-                // imgU.attr('href', eventUrl);
+                imgU.attr('src', imgURL); 
                 $('#pic').append(imgU);
               
                 var eventName = json.name;
                 var eventUrl = json.url;
                 var venue = json._embedded.venues[0];
-               
-                
+
                 var lat = json._embedded.venues[0].location.latitude;
                 var long = json._embedded.venues[0].location.longitude;
 
@@ -64,9 +61,6 @@ function eventDetails(idArray){
                 // console.log(long);
 
                 $("#eventName").append(eventName);
-                $('#buy').on('click',function () {
-                  window.location= eventUrl;
-                })
                 $("#eventDate").append(json.dates.start.localDate);
                 $("#eventTime").append(json.dates.start.localTime);
                 $("#eventPrice").append("$" + json.priceRanges[0].min + " - " + "$" + json.priceRanges[0].max)
@@ -74,6 +68,9 @@ function eventDetails(idArray){
                 $("#eventAddress").append(venue.address.line1 + "," + venue.city.name + "," + venue.state.name + "," + venue.state.stateCode);
                 $("#eventGenre").append(json.classifications[0].genre.name);
                 $('#eventInfo').append(venue.generalInfo.generalRule);
+                $("#buy").on("click", function() {
+                  window.location = eventUrl;
+                });
              }            
   });
 };
