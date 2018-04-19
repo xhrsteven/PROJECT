@@ -59,19 +59,24 @@ $.ajax({
             
             var img = $('<img>');
             img.attr('data-id', json._embedded.events[i].id);
-            var imgName = $('<p>' + json._embedded.events[i].name + '</p><p>' + json._embedded.events[i]._embedded.venues[0].name + '</p><p>' + json._embedded.events[i].dates.start.localDate + '</p>' + '</p><p>' + json._embedded.events[i].dates.start.localTime + '</p>');
-            imgName.attr('style', 'line-height: 40%; margin-top: 5px')
             img.attr('src', json._embedded.events[i].images[0].url);
             img.attr('data-id', json._embedded.events[i].id);
             img.attr('style', 'width: 300px; height: 200px; margin-left: 10px; clear: both;');
-            // img.attr('class', 'imageBox');
+            img.attr('class', 'imageBox');
+
+            var imgName = $('<p>' + json._embedded.events[i].name + '</p><p>' + json._embedded.events[i]._embedded.venues[0].name + '</p><p>' + json._embedded.events[i].dates.start.localDate + '</p><p>' + json._embedded.events[i].dates.start.localTime + '</p>');
+            
+            imgName.attr('style', 'line-height: 40%; margin-top: 5px')
             eventImage.append(img);
             eventImage.append(imgName);
             
+
+
+            
             // json._embedded.events[0].id
-            img.on('click', function() {
+            img.on("click", function() {
             localStorage.clear();
-            var idPush = img.attr('data-id');
+            var idPush = img.attr("data-id");
             localStorage.setItem("ID", JSON.stringify(idPush));
         })
 
