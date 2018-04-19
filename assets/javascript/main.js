@@ -1,5 +1,5 @@
 
-var idArray1 = localStorage.getItem('ID').replace(/['"]+/g, '');
+var idArray1 = localStorage.getItem('id').replace(/['"]+/g, '');
 var idArray = idArray1.replace(/[\[\]']+/g, '');
 
 console.log(idArray);
