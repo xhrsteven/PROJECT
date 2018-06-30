@@ -6,7 +6,7 @@ Concert Detective combines the buying power of TicketMaster and flexibility to c
 ## Demo
 https://concertdetect.herokuapp.com/index.html
 
-## Presentaction
+## Presentation
 https://docs.google.com/presentation/d/1Sni4inzfvWZ4pdML8Yk3HDH-j9u_gXgRbIxlqBhgX5o/edit#slide=id.g384cd7ac6f_0_6
 
 
