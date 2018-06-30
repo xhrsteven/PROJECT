@@ -1,0 +1,25 @@
+{
+  "name": "concert-detective",
+  "version": "1.0.0",
+  "description": "Concert detective is a web and mobile user friendly app that helps you find concerts on the go. It is search customizable to filter specific details to cater to your music preferences.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xhrsteven/concert-detective.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xhrsteven/concert-detective/issues"
+  },
+  "homepage": "https://github.com/xhrsteven/concert-detective#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "request": "^2.87.0"
+  }
+}
